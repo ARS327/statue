@@ -10,6 +10,10 @@
     <script>
         var lower = (window.innerWidth * .25) - 10;
         var upper = (window.innerWidth * .25) + 10;
+        var sound = document.createElement("audio");
+        sound.src = "sound/start.mp3";
+        sound.loop = true;
+        sound.play();
         
         $(document).mousemove(function(e) {     
             if(e.pageX < lower)
@@ -29,8 +33,12 @@
         });
         
         $(document).keydown(function(e) {
+            $(this).find('audio').stop(true, true);
             if(e.keyCode == 65) {
+                sound.src = "sound/rainbow.mp3";
+                sound.loop = true;
                 $('.one').attr('src', 'images/rainbow2.gif');
+                sound.play();
             }
         });
     </script>
