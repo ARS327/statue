@@ -40,6 +40,12 @@
                 $('.one').attr('src', 'images/rainbow2.gif');
                 sound.play();
             }
+            if(e.keyCode == 83) {
+                sound.src = "sound/pixel.mp3";
+                sound.loop = true;
+                $('.one').attr('src', 'images/pixel.gif');
+                sound.play();
+            }
         });
     </script>
 </html>
