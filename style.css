@@ -1,0 +1,19 @@
+body {
+            background-color: #141414;
+        }
+        .one {
+              z-index: 1;
+              position: absolute;
+             /* width: 100%;
+              height: auto;*/
+              top: 0;
+              left: 25%;
+        }
+        .two {
+              z-index: -999;
+              position: absolute;
+             /* width: 100%;
+              height: auto;*/
+              top: 0;
+              left: 25%;
+        }
