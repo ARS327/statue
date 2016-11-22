@@ -18,6 +18,9 @@
         sound.loop = true;
         sound.play();
         
+        var img_arr = ["images/rainbow2.gif", "images/pixel.gif", "images/noise.gif", "images/bolt.gif", "images/faces.gif", "images/switches.gif", "images/warp.gif"];
+        var sound_arr = ["sound/rainbow.mp3", "sound/pixel.mp3", "sound/noise.mp3", "sound/bolt.mp3", "sound/faces.mp3", "sound/switches.mp3", "sound/warp.mp3"];
+        
         $(document).mousemove(function(e) {     
             if(e.pageX < lower)
                 {
@@ -37,24 +40,12 @@
         
         $(document).keydown(function(e) {
             $(this).find('audio').stop(true, true);
-            if(e.keyCode == 65) {
-                sound.src = "sound/rainbow.mp3";
-                sound.loop = true;
-                $('.one').attr('src', 'images/rainbow2.gif');
+            var x = Math.floor(Math.random() * 7);
+            console.log("number: " + x);
+            sound.src = sound_arr[x];
+            sound.loop = true;
+            $('.one').attr('src', img_arr[x]);
                 sound.play();
-            }
-            if(e.keyCode == 83) {
-                sound.src = "sound/pixel.mp3";
-                sound.loop = true;
-                $('.one').attr('src', 'images/pixel.gif');
-                sound.play();
-            }
-             if(e.keyCode == 68) {
-                sound.src = "sound/pixel.mp3";
-                sound.loop = true;
-                $('.one').attr('src', 'images/noise.gif');
-                sound.play();
-            }
         });
         
         $('.one').hover(
