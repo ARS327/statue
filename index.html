@@ -4,7 +4,8 @@
     <link rel="stylesheet" href="style.css">
     </head>
     
-    <body>    
+    <body>  
+    <!--<div class="bg_animation">-->
         <img class="one" src="images/face.png">
         <img class="two" src="images/face.png">
     </body>
@@ -58,9 +59,9 @@
         
         $('.one').hover(
             function() {
-                $('body').css('background-color', '#800000');
+               $('body').css('background-image', '-webkit-linear-gradient(left, rgb(244,66,241)0%, rgb(137,66,244)20%,rgb(158,213,232)40%, rgb(72,244,66)60%,rgb(238,244, 66)');
             }, function () {
-                 $('body').css('background-color', '#141414');
+                 $('body').css('background-image', '');
             }
         );
        
